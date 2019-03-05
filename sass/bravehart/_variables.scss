@@ -1,0 +1,54 @@
+//
+// Core
+//
+$version: "0.1";
+
+//
+// Grid
+//
+$enable-grid-classes: true !default;
+$enable-percentage-grid: false !default;
+$grid-columns: 12 !default;
+$grid-gutter: 1rem !default;
+$grid-breakpoints: (
+  null: 0,
+  xs: 30em,
+  phone: 30em,
+  sm: 48em,
+  tablet: 48em,
+  md: 64em,
+  lg: 80em,
+  laptop: 85em,
+  xl: 85em,
+  xxl: 116em,
+  desktop: 116em
+) !default;
+
+//
+// Color
+//
+$primary: #d62b2b !default;
+$dark: #303742 !default;
+$light: #fff !default;
+$success: #32b643 !default;
+$warning: #ffb700 !default;
+$error: #e85600 !default;
+
+//
+// Fonts
+//
+$base-font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto !default;
+$mono-font-family: "SF Mono", "Segoe UI Mono", "Roboto Mono", Menlo, Courier, monospace !default;
+$body-font-family: $base-font-family !default;
+$base-font-size: 16px !default;
+
+//
+// Spacing
+//
+$spacing-xxl: 3em !default;
+$spacing-xl: 2em !default;
+$spacing-lg: 1.5em !default;
+$spacing-md: 1em !default;
+$spacing-sm: 0.5em !default;
+$spacing-xs: 0.25em !default;
+$spacing-xxs: 0.125em !default;
