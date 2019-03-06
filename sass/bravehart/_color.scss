@@ -1,30 +1,28 @@
 $primary-dark: darken($primary, 3%) !default;
 $primary-light: lighten($primary, 3%) !default;
-$secondary: lighten($primary, 37.5%) !default;
 $secondary-dark: darken($secondary, 3%) !default;
 $secondary-light: lighten($secondary, 3%) !default;
 
 // Gray colors
-$gray: lighten($dark, 55%) !default;
-$gray-dark: darken($gray, 30%) !default;
-$gray-light: lighten($gray, 20%) !default;
-
-$border: lighten($dark, 65%) !default;
-$border-dark: darken($border, 10%) !default;
-$border-light: lighten($border, 8%) !default;
-$bg: lighten($dark, 75%) !default;
-$bg-dark: darken($bg, 3%) !default;
-$bg-light: $light !default;
+$white: #fff !default;
+$gray-100: #f8f9fa !default;
+$gray-200: #e9ecef !default;
+$gray-300: #dee2e6 !default;
+$gray-400: #ced4da !default;
+$gray-500: #adb5bd !default;
+$gray-600: #6c757d !default;
+$gray-700: #495057 !default;
+$gray-800: #343a40 !default;
+$gray-900: #212529 !default;
+$black: #000 !default;
 
 // Other colors
-$body-bg: $bg-light !default;
-$body-font: lighten($dark, 5%) !default;
 $link: $primary !default;
 $link-dark: darken($link, 10%) !default;
 $link-light: lighten($link, 10%) !default;
 
+// WIP
 $color-var: 5%;
-
 $color-list: (
   primary: $primary,
   red: #e3342f,

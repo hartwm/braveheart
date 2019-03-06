@@ -131,3 +131,17 @@ if (!function_exists('understrap_all_excerpts_get_more_link')) {
 		return $post_excerpt;
 	}
 }
+
+
+
+if (!function_exists('img_url')) {
+	function img_url($link = null)
+	{
+		$img = get_template_directory_uri() . '/img';
+		if ($link) {
+			$img = 	$img . '/' . $link;
+		}
+
+		return $img;
+	}
+}
