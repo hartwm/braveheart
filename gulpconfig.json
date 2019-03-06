@@ -1,23 +1,23 @@
 {
-  "browserSyncOptions": {
-    "proxy": "localhost/",
-    "notify": false
-  },
-  "browserSyncWatchFiles": [
-    "./css/*.min.css",
-    "./js/*.min.js",
-    "./**/*.php"
-  ],
-  "paths": {
-    "js": "./js",
-    "css": "./css",
-    "img": "./img",
-    "imgsrc": "./src/img",
-    "sass": "./sass",
-    "node": "./node_modules/",
-    "dev": "./src",
-    "dist": "./dist",
-    "distprod": "./dist-product",
-    "vendor": ""
-  }
+	"browserSyncOptions": {
+		"proxy": "cavresort.local/",
+		"notify": false
+	},
+	"browserSyncWatchFiles": [
+		"./css/*.min.css",
+		"./js/*.min.js",
+		"./**/*.php"
+	],
+	"paths": {
+		"js": "./js",
+		"css": "./css",
+		"img": "./img",
+		"imgsrc": "./src/img",
+		"sass": "./sass",
+		"node": "./node_modules/",
+		"dev": "./src",
+		"dist": "./dist",
+		"distprod": "./dist-product",
+		"vendor": ""
+	}
 }

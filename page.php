@@ -20,21 +20,17 @@ get_header();
 
 <div class="wrapper" id="page-wrapper">
 
-    <div class="" id="content" tabindex="-1">
+    <div class="container" id="content" tabindex="-1">
 
-        <div class="row">
+        <main class="site-main" id="main">
 
-            <main class="site-main" id="main">
+            <?php while (have_posts()) : the_post(); ?>
 
-                <?php while (have_posts()) : the_post(); ?>
+            <?php get_template_part('loop-templates/content', 'page'); ?>
 
-                <?php get_template_part('loop-templates/content', 'page'); ?>
+            <?php endwhile; ?>
 
-                <?php endwhile; ?>
-
-            </main><!-- #main -->
-
-        </div><!-- .row -->
+        </main><!-- #main -->
 
     </div><!-- #content -->
 

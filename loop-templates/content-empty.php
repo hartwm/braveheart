@@ -1,12 +1,10 @@
 <?php
 /**
- * Blank content partial template.
+ * Content empty partial template.
  *
  * @package understrap
  */
-
-if ( ! defined( 'ABSPATH' ) ) {
+if (!defined('ABSPATH')) {
 	exit; // Exit if accessed directly.
 }
-
 the_content();

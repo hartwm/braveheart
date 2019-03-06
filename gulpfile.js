@@ -17,6 +17,10 @@ var cleanCSS = require('gulp-clean-css');
 var gulpSequence = require('gulp-sequence');
 var replace = require('gulp-replace');
 var autoprefixer = require('gulp-autoprefixer');
+var babel = require('gulp-babel');
+var terser = require('gulp-terser');
+
+
 
 // Configuration file to keep your code DRY
 var cfg = require('./gulpconfig.json');
@@ -142,12 +146,18 @@ gulp.task('scripts', function () {
 		paths.dev + '/js/custom-javascript.js'
 	];
 	gulp.src(scripts)
+		.pipe(sourcemaps.init({ loadMaps: true }))
+		.pipe(babel())
+		.pipe(terser())
 		.pipe(concat('theme.min.js'))
-		.pipe(uglify())
+		.pipe(sourcemaps.write('./'))
 		.pipe(gulp.dest(paths.js));
 
 	gulp.src(scripts)
+		.pipe(sourcemaps.init({ loadMaps: true }))
+		.pipe(babel())
 		.pipe(concat('theme.js'))
+		.pipe(sourcemaps.write('./'))
 		.pipe(gulp.dest(paths.js));
 });
 
