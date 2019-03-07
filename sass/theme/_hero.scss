@@ -1,0 +1,39 @@
+.hero {
+  width: 100%;
+  position: relative;
+  height: 40vh;
+  overflow: hidden;
+}
+.hero-img {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  object-fit: cover;
+  object-position: 50% 50%;
+}
+
+.hero-text {
+  @extend .container-md;
+  margin-top: -100px;
+  text-align: center;
+  h2 {
+    @extend .h2;
+    font-family: $heading;
+    font-weight: $bold-heading;
+    margin: 1em auto;
+  }
+  p {
+    line-height: 1.75;
+    color: $gray-600;
+    @include up(md) {
+      @include font-size(pow($type-rhythm, 1) * $base-font-size);
+    }
+  }
+}
+.hero-text-inner {
+  padding-bottom: 2rem;
+  background: $white;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 -1rem 1.5rem rgba($black, 0.2);
+}

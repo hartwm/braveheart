@@ -135,7 +135,10 @@ gulp.task('scripts', function () {
 	var scripts = [
 
 		// End - All BS4 stuff
+
+		paths.dev + '/js/fullpage.js',
 		paths.dev + '/js/skip-link-focus-fix.js',
+		paths.dev + '/js/hammer.js',
 
 		// Adding currently empty javascript file to add on for your own themes´ customizations
 		// Please add any customizations to this .js file only!
@@ -168,27 +171,11 @@ gulp.task('clean-source', function () {
 ////////////////// All Bootstrap SASS  Assets /////////////////////////
 gulp.task('copy-assets', function () {
 
-	////////////////// All Bootstrap 4 Assets /////////////////////////
-	// Copy all JS files
-	var stream =
+	gulp.src(paths.node + 'hammerjs/hammer.js')
+		.pipe(gulp.dest(paths.dev + '/js'));
 
-		////////////////// End Bootstrap 4 Assets /////////////////////////
-
-		// Copy all Font Awesome Fonts
-		// gulp.src(paths.node + 'font-awesome/fonts/**/*.{ttf,woff,woff2,eot,svg}')
-		// 	.pipe(gulp.dest('./fonts'));
-
-		// // Copy all Font Awesome SCSS files
-		// gulp.src(paths.node + 'font-awesome/scss/*.scss')
-		// 	.pipe(gulp.dest(paths.dev + '/sass/fontawesome'));
-
-		// // _s SCSS files
-		// gulp.src(paths.node + 'undescores-for-npm/sass/media/*.scss')
-		// 	.pipe(gulp.dest(paths.dev + '/sass/underscores'));
-
-		// _s JS files into /src/js
-		gulp.src(paths.node + 'undescores-for-npm/js/skip-link-focus-fix.js')
-			.pipe(gulp.dest(paths.dev + '/js'));
+	gulp.src(paths.node + 'undescores-for-npm/js/skip-link-focus-fix.js')
+		.pipe(gulp.dest(paths.dev + '/js'));
 });
 
 

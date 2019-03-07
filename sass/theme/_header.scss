@@ -1,0 +1,25 @@
+.toggle-menu {
+  display: none;
+}
+
+.horizontal-nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+.main-nav {
+  a {
+    color: $black;
+    @include transition();
+
+    &:hover {
+      color: $primary;
+    }
+  }
+}
+
+.logo-svg {
+  display: block;
+  max-width: 15rem;
+  max-height: 6rem;
+}

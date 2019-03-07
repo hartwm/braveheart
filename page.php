@@ -16,17 +16,23 @@ if (!defined('ABSPATH')) {
 
 get_header();
 
+if (is_front_page()) {
+	get_template_part('global-templates/hero', 'home');
+} else {
+	get_template_part('global-templates/hero');
+}
+
 ?>
 
 <div class="wrapper" id="page-wrapper">
 
-    <div class="container" id="content" tabindex="-1">
+    <div class="container-full" id="content" tabindex="-1">
 
         <main class="site-main" id="main">
 
             <?php while (have_posts()) : the_post(); ?>
 
-            <?php get_template_part('loop-templates/content', 'page'); ?>
+            <?php get_template_part('loop-templates/content-page', $post->post_name); ?>
 
             <?php endwhile; ?>
 

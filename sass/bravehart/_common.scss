@@ -1,0 +1,40 @@
+/* Toggle Menu Hamburger */
+.toggle-menu {
+  display: block;
+  width: 28px;
+  height: 30px;
+  margin: 30px auto 10px;
+}
+
+.toggle-menu span:after,
+.toggle-menu span:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: -9px;
+}
+.toggle-menu span:after {
+  top: 9px;
+}
+.toggle-menu span {
+  position: relative;
+  display: block;
+}
+
+.toggle-menu span,
+.toggle-menu span:after,
+.toggle-menu span:before {
+  width: 100%;
+  height: 5px;
+  background-color: $gray-700;
+  transition: all 0.3s;
+  backface-visibility: hidden;
+  border-radius: 2px;
+}
+
+.toggle-menu.on span {
+  background-color: transparent;
+}
+.toggle-menu.on span:before {
+  transform: rotate(45deg) translate(5px, 5px);
+}

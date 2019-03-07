@@ -45,7 +45,7 @@ $base-font-size: 16px !default;
 $font: $base-font-family;
 $heading: "Playfair Display", serif;
 $bold-font: 700;
-$bold-heading: 900;
+$bold-heading: 700;
 
 //
 // Spacing
@@ -57,3 +57,8 @@ $spacing-md: 1em !default;
 $spacing-sm: 0.5em !default;
 $spacing-xs: 0.25em !default;
 $spacing-xxs: 0.125em !default;
+
+//
+// Transitions
+//
+$transition-base: all 300ms ease-in-out;

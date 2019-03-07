@@ -19,7 +19,7 @@ if (!defined('ABSPATH')) {
     <meta charset="<?php bloginfo('charset'); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="profile" href="http://gmpg.org/xfn/11">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700,700i|Playfair+Display:400,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,300i,700,700i|Playfair+Display:400,700" rel="stylesheet">
     <?php wp_head(); ?>
 </head>
 
@@ -41,30 +41,37 @@ if (!defined('ABSPATH')) {
 
                 <div class="container">
 
-					<a href="/">
-						<svg>
-							<use xlink:href="#site-logo"></use>
-						</svg> 
-					</a>
- 
+                    <div class="row justify-content-between align-items-center">
 
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="<?php esc_attr_e('Toggle navigation', 'understrap'); ?>">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
+                        <div class="col">
+                            <a href="/" class="logo-link" title="<?= get_bloginfo('name') ?>" alt="<?= get_bloginfo('url') ?>">
+                                <svg alt="<?= get_bloginfo('name') ?> - Logo" class="logo-svg">
+                                    <use xlink:href="#site-logo"></use>
+                                </svg>
+                            </a>
+                        </div>
 
-                    <!-- The WordPress Menu goes here -->
-                    <?php wp_nav_menu(
-						array(
-							'theme_location'  => 'primary',
-							'container_class' => 'collapse navbar-collapse',
-							'container_id'    => 'navbarNavDropdown',
-							'menu_class'      => 'navbar-nav',
-							'fallback_cb'     => '',
-							'menu_id'         => 'main-menu',
-							'depth'           => 2,
-							'walker'          => new Understrap_WP_Bootstrap_Navwalker(),
-						)
-					); ?>
+                        <div class="col">
+                            <a href="#" id="toggle" class="toggle-menu" aria-expanded="false" aria-label="<?php esc_attr_e('Toggle navigation', 'understrap'); ?>"><span></span></a>
+
+
+                            <!-- The WordPress Menu goes here -->
+                            <?php wp_nav_menu(
+								array(
+									'theme_location'  => 'primary',
+									'container_class' => 'closed-nav main-nav',
+									'container_id'    => '',
+									'menu_class'      => 'horizontal-nav',
+									'fallback_cb'     => '',
+									'menu_id'         => 'main-menu',
+									'depth'           => 2,
+									'walker'          => new Understrap_WP_Bootstrap_Navwalker(),
+								)
+							); ?>
+                        </div>
+
+                    </div>
+
                 </div><!-- .container -->
 
             </nav><!-- .site-navigation -->
